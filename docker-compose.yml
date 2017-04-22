@@ -1,0 +1,13 @@
+version: "3.0"
+services:
+  openssh:
+    build:
+      context:
+        ./  
+    hostname:
+      ct-ssh
+    ports:
+      - "2222:22"
+    volumes:
+      - ./keys:/root/.ssh/keys
+    restart: always
