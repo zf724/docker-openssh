@@ -14,8 +14,6 @@ RUN set -xe \
 ADD https://raw.githubusercontent.com/zf724/ssh/master/docker-entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
-ENV hostname "root"
-
 WORKDIR /root
 VOLUME /root
 
