@@ -4,8 +4,8 @@ services:
     build:
       context:
         https://raw.githubusercontent.com/zf724/ssh/master/Dockerfile  
-    hostname:
-      ct-ssh
+#    hostname:
+#      ct-ssh
     ports:
       - "2222:22"
     volumes:
