@@ -3,11 +3,11 @@ services:
   openssh:
     build:
       context:
-        ./  
+        https://raw.githubusercontent.com/zf724/ssh/master/Dockerfile  
     hostname:
       ct-ssh
     ports:
       - "2222:22"
     volumes:
-      - ./keys:/root/.ssh/keys
+      - /docker/keys:/root/.ssh/keys
     restart: always
