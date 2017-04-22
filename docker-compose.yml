@@ -3,7 +3,7 @@ services:
   openssh:
     build:
       context:
-        https://raw.githubusercontent.com/zf724/ssh/master/Dockerfile  
+        https://raw.githubusercontent.com/zf724/openssh/master/Dockerfile  
     hostname:
       ct-ssh
     ports:
