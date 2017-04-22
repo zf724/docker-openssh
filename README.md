@@ -7,7 +7,7 @@ openssh
 ```bash
 $ cd ~/openssh/
 
-$ tree keys
+$ tree /docker/keys
 └─my.pub
 
 $ docker-compose up -d

@@ -11,7 +11,7 @@ RUN set -xe \
     && mv /etc/ssh /root/.ssh/ssh \
     && ln -s /root/.ssh/ssh /etc/ssh
 
-COPY docker-entrypoint.sh /entrypoint.sh
+ADD https://raw.githubusercontent.com/zf724/ssh/master/docker-entrypoint.sh /entrypoint.sh
 
 WORKDIR /root
 VOLUME /root
