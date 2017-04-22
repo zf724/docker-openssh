@@ -12,6 +12,7 @@ RUN set -xe \
     && ln -s /root/.ssh/ssh /etc/ssh
 
 ADD https://raw.githubusercontent.com/zf724/ssh/master/docker-entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
 WORKDIR /root
 VOLUME /root
