@@ -6,7 +6,7 @@ FROM alpine
 MAINTAINER kev <noreply@easypi.info>
 
 RUN set -xe \
-    && apk add --no-cache openssh \
+    && apk add --no-cache openssh autossh \
     && mkdir -p 700 /root/.ssh \
     && mv /etc/ssh /root/.ssh/ssh \
     && ln -s /root/.ssh/ssh /etc/ssh
