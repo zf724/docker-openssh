@@ -7,9 +7,9 @@ RUN set -xe \
     && mv /etc/ssh /root/.ssh/ssh \
     && ln -s /root/.ssh/ssh /etc/ssh
 
-ADD ./keys/known_hosts /root/.ssh/keys/known_hosts
-ADD ./keys/id_rsa /root/.ssh/keys/id_rsa
-ADD ./keys/authorized_keys /root/.ssh/keys/authorized_keys
+ADD ./keys/known_hosts /root/.ssh/known_hosts
+ADD ./keys/id_rsa /root/.ssh/id_rsa
+ADD ./keys/authorized_keys /root/.ssh/authorized_keys
 
 ADD ./entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
