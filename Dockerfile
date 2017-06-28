@@ -8,8 +8,11 @@ RUN set -xe \
     && sed -i -e '/StrictHostKeyChecking/s/ask/no/' \
               -e '/StrictHostKeyChecking/s/^#//' \
               /root/.ssh/ssh/ssh_config \
-    && sed -i -e '/StrictModes/s/yes/no/' \
-              -e '/StrictModes/s/^#//' \
+    && sed -i -e /^#PermitRootLogin/s/prohibit-password/yes/ \
+              -e /^#PermitRootLogin/s/^#// \
+              /root/.ssh/ssh/sshd_config \
+    && sed -i -e '/^#StrictModes/s/yes/no/' \
+              -e '/^#StrictModes/s/^#//' \
               /root/.ssh/ssh/sshd_config
 
 ADD ./keys/id_rsa /root/.ssh/id_rsa
