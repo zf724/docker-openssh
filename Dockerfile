@@ -7,7 +7,10 @@ RUN set -xe \
     && ln -s /root/.ssh/ssh /etc/ssh \
     && sed -i -e '/StrictHostKeyChecking/s/ask/no/' \
               -e '/StrictHostKeyChecking/s/^#//' \
-              /root/.ssh/ssh/ssh_config
+              /root/.ssh/ssh/ssh_config \
+    && sed -i -e '/StrictModes/s/yes/no/' \
+              -e '/StrictModes/s/^#//' \
+              /root/.ssh/ssh/sshd_config
 
 ADD ./keys/id_rsa /root/.ssh/id_rsa
 ADD ./keys/authorized_keys /root/.ssh/authorized_keys
